@@ -7,7 +7,7 @@ import BookStore.*;
 public class Details {
     public static ArrayList<Book> books= new ArrayList<>();
     public static ArrayList<User> users=new ArrayList<>();
-   // public static ArrayList<Admin> admins=new ArrayList<>();
+    public static ArrayList<Admin> admins=new ArrayList<>();
     public Details(){
 
         Book b1=new Book("CleanCode", "Robert", 250, 3, "software");
@@ -23,6 +23,11 @@ public class Details {
         User u2=new User("jamuna", "123",4321);
         users.add(u1);
         users.add(u2);
+
+        Admin a1=new Admin("lavanya", "123");
+        Admin a2=new Admin("jamuna","1234");
+        admins.add(a1);
+        admins.add(a2);
 
 
     }
@@ -41,3 +46,4 @@ public class Details {
 //    }
 
 }
+

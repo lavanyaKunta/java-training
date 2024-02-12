@@ -4,6 +4,7 @@ import DETAILS.Details;
 import User.User;
 import Admin.*;
 import BookStore.Book;
+import User.UserService;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -12,6 +13,8 @@ public class Main {
         Scanner sc=new Scanner(System.in);
         Book bs=new Book();
         Details d=new Details();
+        AdminService service=new AdminService();
+        UserService uService=new UserService();
         while (true){
             System.out.println("-----------------------------------------------------------------------");
             System.out.println("1.Continue   2.Exit ");
@@ -26,7 +29,7 @@ public class Main {
                     switch (chooseNum){
                         case 1:
                             Admin admin=new Admin();
-                            admin.login();
+                            service.login();
                             break;
                         case 2:
                             System.out.print("1.REGISTER  2.LOGIN  3.GO BACK :  ");
@@ -34,10 +37,10 @@ public class Main {
                             User users=new User();
                             switch (userChoice){
                                 case 1:
-                                    users.userRegister();
+                                    uService.userRegister();
                                     break;
                                 case 2:
-                                    users.userLogin();
+                                    uService.userLogin();
                                     break;
                                 case 3:
                                     break;
